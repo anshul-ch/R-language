@@ -36,3 +36,8 @@ n1 <- as.integer(n1)                                # to convert the string into
 n2 <- as.numeric(n2)                                 # to convert the string into float or numeric
 sum <- n1+n2                                        # here the priority is given to numeric over integer.
 cat("Sum of ",n1, "and ",n2," is: ", sum,"\n")   # to print the message along with the value of sum
+
+n3 <- as.complex(readline("Enter a complex number: "))
+n4 <- as.complex(readline("Enter another complex number: "))
+sum1 <- n3+n4
+cat("Sum of ",n3, "and ",n4," is: ", sum1,"\n")   # to print the message along with the value of sum1
