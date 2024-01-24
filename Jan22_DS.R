@@ -17,7 +17,7 @@
 a <- c(10,20,30,40,50)   # here c is used to create a vector, it's index start from 1.
 class(a)                 # to check the class of a, it will give numeric as output.
 typeof(a)               # to check the type of vector, it will give double as output.
-b = c("a", 10, 102L, 30+40i)         # it will take all the values as string, and it will give character as output.
+b <- c("a", 10, 102L, 30+40i)         # it will take all the values as string, and it will give character as output.
 class(b)                            # to check the class of b, it will give character as output.
 typeof(b)                           # to check the type of vector, it will give character as output.
 
