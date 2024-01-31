@@ -20,7 +20,7 @@
 # list2$Name[4] <- "f"                  # add new element to the list
 # list2$Name <- list2$Name[-4]          # remove the element from list
 # list2$`Roll no`[c(1,3)]               # to view only 1 and 3 index value
-# print(list2$`Roll no`[c[-2]])            # will not show 2 index element
+# print(list2$`Roll no`[c[-2]])         # will not show 2 index element
 
 ########################################################################################################################
 ########################################################################################################################
