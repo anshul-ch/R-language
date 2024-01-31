@@ -57,4 +57,6 @@ list2["vector1"]
 list2[[1]]             # to call the first vector of list, it just displays the values not in the form of list
 list2$vector1          # to call the first vector of list
 class(list2$vector1)   # to check the class of vector1
-
+print(list2$vector2[3])     # to print the third element of vector2
+list2$ vector2[3] <- "d"     # to change the third element of vector2
+list2$vector1[4] <- NULL     # to delete the fourth element of vector1
