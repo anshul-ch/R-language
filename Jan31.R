@@ -30,9 +30,22 @@
 # syntax: data.frame(col1, col2, col3, col4, col5)
 # col1, col2, col3, col4, col5 are vectors of equal length, and values are entered column wise.
 # It basically represents a table with rows and columns similar to excel spreadsheet or SQL table.
+# I doesn't allow NULL values by default.
 
 v1 <- as.integer(c(1,2,3,4,5))
 v2 <- as.character(c("A","B","C","D","E"))
 v3 <- as.integer(c(90,80,70,60,50))
 dataFrame1 <- data.frame("Rollno" = v1, "Name" = v2, "Marks" = v3)
 print(dataFrame1)
+dataFrame1$Marks[3] <- 75                       # update the value of 3rd index
+dataFrame1$Name[c(1,4)]                        # view only 1 and 4 index value
+
+## we can also create data frame by using edit function
+# dataFrame2 <- edit(dataFrame1)
+# print(dataFrame2)
+# it will open a new window to enter the values
+
+dataframe2 <- edit(dataFrame1)
+print(dataframe2)
+print(colnames(dataframe2))                       # to get column names of dataframe1
+colnames(dataframe2)[3] <- "Student_Marks"        # to change the name of column
