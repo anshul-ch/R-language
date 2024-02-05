@@ -23,3 +23,9 @@ str(dataframe1)
 
 # Columns are called as Variables in DataSet.
 # Rows are called as Observations or Records in DataSet.
+
+# to import a dataset (Excel file) in R.
+
+library(readxl)    # to import readxl library
+d1 <- read_excel("//home//anshul//Downloads//annual.xlsx")  # reading a excel file
+d1 <- read_excel(file.choose())
