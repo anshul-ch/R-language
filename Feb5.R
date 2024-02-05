@@ -28,4 +28,3 @@ str(dataframe1)
 
 library(readxl)    # to import readxl library
 d1 <- read_excel("//home//anshul//Downloads//annual.xlsx")  # reading a excel file
-d1 <- read_excel(file.choose())
