@@ -13,7 +13,6 @@ View(dataframe1)
 # add of new row into the data table
 newdata <- data.frame("Rollno" = 22, "Std_Name" = "Riya","Gender" = "F","CGPA" = 7.0)
 dataframe2 <- rbind(dataframe1,newdata)
-print(dataframe2)
 
 # add new column to the dataframe
 newcolumn <- as.character(c("Mumbai","Pune","Delhi","Kolkata","Chennai","Bangalore"))
@@ -21,11 +20,14 @@ dataframe2 <- cbind(dataframe2, "City" = newcolumn)
 View(dataframe2)
 
 # remove the row from the dataframe
-dataframe2 <- dataframe2[-c(6),]       # it will delete the entire 6th row
+dataframe2 <- dataframe2[-c(6),]   # it will remove the entire 6th row
 
 # remove the column from the dataframe
-dataframe2 <- dataframe2[,-c(6)]       # it will delete the entire 6th column
-dataframe1[3,4]                        # to view the value of 3rd row and 4th column
-dataframe1[3,]                         # to view the entire 3rd row
-dataframe1[,4]                         # to view the entire 4th column
-dataframe1$Std_Name[c(3,4)])         # to view the 3rd and 4th index value of Std_Name column
+dataframe2 <- dataframe2[,-c(4)]       # it will delete the entire 6th column
+
+dataframe1[3,4]                        # it will give the value of 3rd row and 4th column
+dataframe1[3,1] <- NA                  # it will replace the value of 3rd row and 1st column with NA
+dataframe1$Rollno[3] <- 10             # it will replace the value of 3rd row and 1st column with 10
+range(dataframe1$CGPA)                 # it will give the range of the CGPA
+diff(range(dataframe1$CGPA))          # it will give the difference of the range of the CGPA
+
