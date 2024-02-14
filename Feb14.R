@@ -17,17 +17,28 @@ rollno <- as.numeric(rollno)                                # convert the rollno
 cgpa <- as.numeric(cgpa)                                    # convert the cgpa array/vector to numeric
 dataframe1 <- data.frame("Rollno" = rollno, "Std_Name" =name, "CGPA"=cgpa)       # create a dataframe
 
-# add new data to the dataframe by rbind and cbind
+# add new data new data
 
-newdata <- data.frame("Rollno" = 22, "Std_Name" = "Riya","CGPA" = 7.0)           # create a new row
-dataframe1 <- rbind(dataframe1,newdata)                                          # add the new row to the dataframe
+m <- as.integer(readline("How many new rows? "))  # take the number of new rows from the user
 
-# add new column to the dataframe
-city <- c("Mumbai","Pune","Delhi","Kolkata","Chennai","Bangalore")
-dataframe1 <- cbind(dataframe1, "City" = city)                                  # add the new column to the dataframe
-print(dataframe1)
+# Create separate vectors for new data
+new_rollno <- character(m)
+new_name <- character(m)
+new_cgpa <- numeric(m)
 
-write.csv(dataframe1, file = "dataframe1.csv")                                  # write the dataframe to a csv file
+# Loop to take input for new data
+for (i in 1:m) {
+  new_rollno[i] <- readline(prompt = "Enter the rollno: ")
+  new_name[i] <- readline(prompt = "Enter the name: ")
+  new_cgpa[i] <- readline(prompt = "Enter the cgpa: ")
+}
+
+# Create a data frame for the new data
+newdata <- data.frame("Rollno" = new_rollno, "Std_Name" = new_name, "CGPA" = new_cgpa)
+
+# Combine the new data with the existing data frame
+dataframe2 <- rbind(dataframe1, newdata)
+
 write.csv(dataframe1, file = "dataframe1.xlsx")                                 # write the dataframe to an excel file
 write.table(dataframe1, file = "dataframe1.txt")                                # write the dataframe to a text file
 write.table(dataframe1, file = "dataframe1.doc")                               # write the dataframe to a word file
