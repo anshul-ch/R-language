@@ -37,8 +37,8 @@ for (i in 1:m) {
 newdata <- data.frame("Rollno" = new_rollno, "Std_Name" = new_name, "CGPA" = new_cgpa)
 
 # Combine the new data with the existing data frame
+dataframe1 <- rbind(dataframe1, newdata)
 dataframe2 <- rbind(dataframe1, newdata)
-
 # Save the data frame into  new file.
 
 write.csv(dataframe1, file = "dataframe1.csv")                                   # write the dataframe to a csv file
