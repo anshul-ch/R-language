@@ -35,12 +35,14 @@ for (i in 1:m) {
 
 # Create a data frame for the new data
 newdata <- data.frame("Rollno" = new_rollno, "Std_Name" = new_name, "CGPA" = new_cgpa)
+section <- c("A", "B", "C", "D", "E","F","G")
 
 # Combine the new data with the existing data frame
 dataframe1 <- rbind(dataframe1, newdata)
 dataframe2 <- rbind(dataframe1, newdata)
-# Save the data frame into  new file.
+dataframe1 <- cbind(dataframe1, "Section" = section)
 
+# Save the data frame into  new file.
 write.csv(dataframe1, file = "dataframe1.csv")                                   # write the dataframe to a csv file
 write.csv(dataframe1, file = "dataframe1.xlsx")                                 # write the dataframe to an excel file
 write.table(dataframe1, file = "dataframe1.txt")                                # write the dataframe to a text file
