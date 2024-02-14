@@ -30,4 +30,10 @@ dataframe1[3,1] <- NA                  # it will replace the value of 3rd row an
 dataframe1$Rollno[3] <- 10             # it will replace the value of 3rd row and 1st column with 10
 range(dataframe1$CGPA)                 # it will give the range of the CGPA
 diff(range(dataframe1$CGPA))          # it will give the difference of the range of the CGPA
+a = c(43, 25, 30, 17, 57)
+print(a[c(-2,-4)])
+num = c(10, 20, 30)
 
+num[2] = "40"
+
+num
