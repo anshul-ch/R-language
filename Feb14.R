@@ -39,6 +39,9 @@ newdata <- data.frame("Rollno" = new_rollno, "Std_Name" = new_name, "CGPA" = new
 # Combine the new data with the existing data frame
 dataframe2 <- rbind(dataframe1, newdata)
 
+# Save the data frame into  new file.
+
+write.csv(dataframe1, file = "dataframe1.csv")                                   # write the dataframe to a csv file
 write.csv(dataframe1, file = "dataframe1.xlsx")                                 # write the dataframe to an excel file
 write.table(dataframe1, file = "dataframe1.txt")                                # write the dataframe to a text file
 write.table(dataframe1, file = "dataframe1.doc")                               # write the dataframe to a word file
