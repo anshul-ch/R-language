@@ -28,4 +28,6 @@ dataframe1 <- cbind(dataframe1, "City" = city)                                  
 print(dataframe1)
 
 write.csv(dataframe1, file = "dataframe1.csv")                                  # write the dataframe to a csv file
-write.csv(dataframe1, file = "dataframe1.xlsx")                               # write the dataframe to an excel file
+write.csv(dataframe1, file = "dataframe1.xlsx")                                 # write the dataframe to an excel file
+write.table(dataframe1, file = "dataframe1.txt")                                # write the dataframe to a text file
+write.table(dataframe1, file = "dataframe1.doc")                               # write the dataframe to a word file
