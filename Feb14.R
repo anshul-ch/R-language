@@ -31,3 +31,4 @@ write.csv(dataframe1, file = "dataframe1.csv")                                  
 write.csv(dataframe1, file = "dataframe1.xlsx")                                 # write the dataframe to an excel file
 write.table(dataframe1, file = "dataframe1.txt")                                # write the dataframe to a text file
 write.table(dataframe1, file = "dataframe1.doc")                               # write the dataframe to a word file
+write.csv(dataframe1, file = "dataframe1.xlsx", row.names = FALSE)                                # without row numbers.
