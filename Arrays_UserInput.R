@@ -48,3 +48,25 @@ write.csv(dataframe1, file = "dataframe1.xlsx")                                 
 write.table(dataframe1, file = "dataframe1.txt")                                # write the dataframe to a text file
 write.table(dataframe1, file = "dataframe1.doc")                               # write the dataframe to a word file
 write.csv(dataframe1, file = "dataframe1.xlsx", row.names = FALSE)             # without row numbers.
+
+#######################################################################################################################
+
+# Append and Merge Dataframes
+
+#######################################################################################################################
+
+r <- c()
+n <- c()
+cg <- c()
+n <- as.integer(readline("Enter no of rows"))
+for (i in 1:n) {
+  r[i] <- as.numeric(readline(prompt = "Enter the rollno: "))
+  n[i] <- readline(prompt = "Enter the name: ")
+  cg[i] <- as.numeric(readline(prompt = "Enter the cgpa: "))
+}
+
+dataframe3 <- data.frame("Rollno" = r, "Std_Name" = n, "CGPA" = cg)
+dataframe4 <- merge(dataframe1, dataframe3, by = "Rollno",all = TRUE)
+dataframe5 <- append(dataframe1, dataframe3)
+View(dataframe4)
+View(dataframe5)
