@@ -31,12 +31,15 @@ EvenOdd(14)
 
 primeOrNot <- function(n){
   if(n<=1){
-    return ("ENter a number greater than 1")
+    return ("Enter a number greater than 1")
+  }
+  else if (n == 2){
+    return(cat(n, "is a prime number"))
   }
   else{
-    for(i in 2:(n/2)){
+    for(i in 2:sqrt(n)){
       if(n%%i==0){
-        return (cat(n,"is not a prime number"))
+        return(cat(n,"is not a prime number"))
       }
     }
     return (cat(n,"is a prime number"))
@@ -79,3 +82,31 @@ add <- function(a,b){
 a <- as.integer(readline("Enter the first number: "))
 b <- as.integer(readline("Enter the second number: "))
 add(a,b)
+
+
+# Function to print sum of sqaures of first n natural numbers
+
+sumOfSqaures <- function (n){
+    return (n*(n+1)*(2*n+1)/6)
+}
+n1 <- as.integer(readline("Enter a number: "))
+cat("Sum of squares of first",n,"natural numbers is",sumOfSqaures(n1))
+
+
+################################################################################################
+
+diabetes <- read.csv("~/Downloads/diabetes.csv")
+View(diabetes)
+str(diabetes)              # Structure of the dataset
+head(diabetes)             # First 6 rows of the dataset
+tail(diabetes)            # Last 6 rows of the dataset
+summary(diabetes$DiabetesPedigreeFunction)         # Summary of the dataset
+
+# convert the outcome column into a factor
+
+diabetes$Outcome <- as.factor(diabetes$Outcome)
+str(diabetes)
+
+# replace 0 with No and 1 with Yes in the Outcome column
+# aslo known as vairable encoding
+diabetes$Outcome <- factor(diabetes$Outcome, levels = c(0,1), labels = c("No","Yes"))
