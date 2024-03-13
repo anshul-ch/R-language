@@ -15,3 +15,19 @@ hist(dataset$texture_mean)                                   # histogram for the
 plot(dataset$texture_mean)                                   # scatter graph of dataset texture_mean column
 sum(complete.cases(dataset))                                 # to show where there is no single null value
 }
+
+# Data pre-processing
+
+{
+  dataset <- read.csv(file.choose())
+  View(dataset)
+  table(dataset$x1)
+  colnames(dataset) <- c("Country", "Age", "Salary", "Purchased")
+  sum(is.na(dataset))
+  dataset[!complete.cases(dataset),]                        # where there is a missing value
+
+  # to handle missing value, replace the place with the average of the column without considering missing value
+  dataset$Age <- ifelse(is.na(dataset$Age),mean(dataset$Age, na.rm = T),dataset$Age)
+  # na.rm= T will remove the missing values
+  dataset$Salary <- ifelse(is.na(dataset$Salary),mean(dataset$Salary, na.rm = T),dataset$Salary)
+}
