@@ -1,9 +1,9 @@
 {
   library(tidyr)
-  n = 10
+  n <- 10
   # create a data frame with s.no, group.1,
   #group.2,group.3 columns
-  tidy_dataframe = data.frame(
+  tidy_dataframe <- data.frame(
     S_No = c(1:n),
     Group.1 = c(23, 345, 76, 212, 88,
                 199, 72, 35, 90, 265),
