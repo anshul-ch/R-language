@@ -23,5 +23,4 @@
   # Upper and Lower case
   toupper(string)
   tolower(string)
-
 }
