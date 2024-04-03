@@ -59,7 +59,16 @@ View(dataset1)
 # or
 dataset1$age <- ifelse(is.na(dataset1$age),mean(dataset$age, na.rm=TRUE), dataset1$age)
 
-
 # display the price of the house on basis on bathrooms available
 table(dataset1$bathrooms)
 sort(tapply(dataset1$price, dataset1$bathrooms, mean), decreasing = TRUE)  # in descending order
+
+# plot the lot_size on a line grpah with red color
+plot(dataset1$lot_size, type  ="line", col="red")
+
+# horizontal bar graph
+barplot(dataset1$lot_size, horiz = TRUE)
+
+# plot price based on rooms with bar graph
+library(plotly)
+plot_ly(x= dataset1$price, y= dataset1$rooms, type = "bar")
