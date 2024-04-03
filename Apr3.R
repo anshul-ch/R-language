@@ -40,7 +40,7 @@ View(dataset1)
 
 View(dataset1 %>% filter(is.na(age)))       # rows where there is a null value in age column
 View(max(dataset1$land_value))              # max of land_value
-diew(Vataset1 %>% filter(land_value>250000))    # rows where land_value > 2,50,000
+View(Vataset1 %>% filter(land_value>250000))    # rows where land_value > 2,50,000
 View(select(dataset1, starts_with("bath")))   # column name starts with bath
 View(summarise(dataset1, mean= mean(land_value)))   # mean value of land_value
 View(select(dataset1, contains("liv")))     # columns name that contain liv
